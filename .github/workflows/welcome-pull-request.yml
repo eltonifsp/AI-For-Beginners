@@ -1,0 +1,37 @@
+name: Welcome to AI For Beginners
+
+on:
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  assess-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add Label and Thanks Comment to Pull Request
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const issueAuthor = context.payload.sender.login
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['needs-review']
+            })
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `👋 Obrigado por contribuir @${issueAuthor}! Vamos revisar seu pull request em breve.`
+            })
+
+      - name: Auto-assign pull request
+        uses: pozil/auto-assign-issue@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          assignees: eltonifsp
