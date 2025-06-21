@@ -20,6 +20,15 @@
 
 Explore the world of **Artificial Intelligence** (AI) with our 12-week, 24-lesson curriculum!  It includes practical lessons, quizzes, and labs. The curriculum is beginner-friendly and covers tools like TensorFlow and PyTorch, as well as ethics in AI
 
+### 🌐 Multi-Language Support
+
+#### Supported via GitHub Action (Automated & Always Up-to-Date)
+
+[German](./translations/de/README.md) | [Spanish](./translations/es/README.md) | [French](./translations/fr/README.md) | [Hindi](./translations/hi/README.md) | [Italian](./translations/it/README.md) | [Japanese](./translations/ja/README.md) | [Korean](./translations/ko/README.md) | [Malay](./translations/ms/README.md) | [Portuguese](./translations/pt/README.md) | [Russian](./translations/ru/README.md) | [Swahili](./translations/sw/README.md) | [Turkish](./translations/tr/README.md) | [Chinese](./translations/zh/README.md)
+
+> ⚠️ Some languages or folders may not be listed due to GitHub API result limits.  
+> See the full list of supported languages [here](https://github.com/eltonifsp/AI-For-Beginners/tree/main/translations).
+
 ## What you will learn
 
 **[Mindmap of the Course](http://soshnikov.com/courses/ai-for-beginners/mindmap.html)**
